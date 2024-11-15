@@ -11,11 +11,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, macOS-latest, windows-latest]
+        os: [ubuntu-latest, macOS-13, macOS-latest, windows-latest]
         include:
         - os: ubuntu-latest
           cmake-init-env: CXXFLAGS=-Werror
           package-file: "*-Linux.tar.gz"
+        - os: macOS-13
+          cmake-init-env: CXXFLAGS=-Werror
+          package-file: "*-Darwin.tar.gz"
         - os: macOS-latest
           cmake-init-env: CXXFLAGS=-Werror
           package-file: "*-Darwin.tar.gz"
