@@ -17,7 +17,8 @@ else()
   find_package(SDL3 REQUIRED CONFIG REQUIRED COMPONENTS SDL3-shared)
 endif()
 
-add_executable(${PROJECT_NAME} WIN32 src/main.cpp)
+FILE(GLOB GAME_SOURCES src/*.cpp src/*.h src/*.c)
+add_executable(${PROJECT_NAME} WIN32 ${GAME_SOURCES})
 target_link_libraries(${PROJECT_NAME} PRIVATE SDL3::SDL3)
 
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION .)
