@@ -31,3 +31,6 @@ Click on the green pipeline checkmark -> Details -> Summary and scroll down to d
 These builds are not perfect for distribution yet. Because they do not bundle the SDL3 dependency.
 But they offer you a good starting point and maybe one day I will improve the pipeline.
 
+## Alternative projects
+
+- [SDL_helloworld](https://github.com/libsdl-org/SDL_helloworld) is the official cmake example maintained by the SDL team
